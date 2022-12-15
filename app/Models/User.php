@@ -32,6 +32,7 @@ class User extends Authenticatable
         'company_doj',
         'model_face',
         'shifting_id',
+        'expired_at',
     ];
 
     /**

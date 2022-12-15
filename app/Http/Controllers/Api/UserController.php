@@ -176,6 +176,7 @@ class UserController extends Controller
             'address' => $request->input('address'),
             'position_id' => $request->input('position_id'),
             'shifting_id' => $request->input('shifting_id'),
+            'expired_at' => Carbon::now()->addDays(1),
         ]);
 
         $userEmail = User::with(['position', 'type'])->where('email', $request->email)->first();
